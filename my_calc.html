@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style>
+button{
+width:200px;
+height:100px;
+background-color:black;
+color:white;
+}
+#col-1{
+align:center;
+height:200px;
+margin-top:5%;
+padding-left:10%;
+}
+h1{
+background-color:snow-white;
+width:100px;
+height:100px;
+margin-left:50%;
+}
+#col-2{
+align:center;
+height:200px;
+margin-top:5%;
+padding-left:10%;
+}
+</style>
+</head>
+<body>
+<h2> Calculator</h2>
+<h1 id="demo">0 </h1>
+<div id="col-1">
+<button onclick="add()">Add (+)</button> 
+<button onclick="subtract()">Subtract (-)</button>
+<button onclick="divide()">Divide (/)</button><br>
+<button onclick="multiply()">Multiply (*) </button>
+<button onclick="modulo()">Modulus (%)</button>
+<button onclick="sqrt()">Square root</button>
+</div>
+<div id="col-2">
+<button onclick="power()">Exponent</button>
+<button onclick="logarithm()">logarithm</button>
+<button onclick="max_num()">Max</button><br>
+<button onclick="min_num()">Min</button>
+<button onclick="logarithm()">Cuberoot</button>
+</div>
+<script>
+function add(){
+var num1 = 5;
+var num2 = 6;
+var sum = num1 + num2;
+document.getElementById("demo").innerHTML=sum;
+}
+//subtraction function
+function subtract(){
+var a = prompt("enter first num");
+var b = prompt("enter second num");
+var ans = a - b;
+document.getElementById("demo").innerHTML=ans;
+}
+
+function divide(){
+ var num1 = prompt("enter first num");
+ var num2 = prompt("enter second num");
+ var ans = num1/num2;
+ document.getElementById("demo").innerHTML=ans;
+}
+function multiply(){
+  var num1 = prompt("enter first num");
+  var num2 = prompt("enter second num");
+  var product = num1 * num2;
+document.getElementById("demo").innerHTML=product;
+ }
+function modulo(){
+  var num1 = prompt("enter first num");
+  var num2 = prompt("enter second num");
+  var ans = num1 % num2;
+document.getElementById("demo").innerHTML=ans;
+}
+//round up number to the nearest whole integer
+function sqrt(){
+  var ans1 = Math.sqrt(prompt("enter number"));
+  document.getElementById("demo").innerHTML=ans1;
+}
+//find the value of a number raised to any power
+function power(){
+  var num1 = prompt("enter number");
+  var exp = prompt("enter exponent value");
+ans = num1 ** exp;
+document.getElementById("demo").innerHTML=ans;
+}
+
+//find the logarithmic value to base 10
+function logarithm(){
+  var ans = Math.LN10(prompt("enter num"));
+  document.getElementById("demo").innerHTML=ans;
+}
+//find max number
+function max_num(){
+   var num1 = prompt("Num1: ");
+   var num2 = prompt("Num2: ");
+   var num3 = prompt("Num3: ");
+   var ans = Math.max(num1,num2,num3);
+  document.getElementById("demo").innerHTML=ans;
+}
+function min_num(){
+  var num1 = prompt("Num1: ");
+  var num2 = prompt("Num2: ");
+  var num3 = prompt("Num3: ");
+  var ans = Math.min(num1,num2,num3);
+  document.getElementById("demo").innerHTML=ans;
+}
+function cbrt(){
+var num1 = prompt("Enter number");
+var ans = Math.cbrt(num1);
+ document.getElementById("demo").innerHTML=ans;
+
+}
+</script>
+</body>
+</html>
